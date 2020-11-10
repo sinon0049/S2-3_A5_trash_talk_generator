@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">幹話產生器</span>
+</nav>
+<h1 style="text-align:center; margin: 20px auto">你想對誰說幹話?</h1>
+<form action="/" method="POST">
+    <div class="cardContainer row justify-content-center">
+        <div class="card col-sm col-md-3 col-lg-2" id="engineerCard" style="width: 18rem; height: 18rem; margin: 1rem; border: 0">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="..." style="height: 13rem; outline: 1px solid #d0d0d0">
+                <label style="margin: 1rem auto"><input type="radio" name="job" value="engineer" {{#if result.engineer}}checked{{/if}}>工程師</label>
+        </div>
+        <div class="card col-sm col-md-3 col-lg-2" id="designerCard" style="width: 18rem; height: 18rem; margin: 1rem; border: 0">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="..." style="height: 13rem; outline: 1px solid #d0d0d0">
+                <label style="margin: 1rem auto"><input type="radio" name="job" value="designer" {{#if result.designer}}checked{{/if}}>設計師</label>
+        </div>
+        <div class="card col-sm col-md-3 col-lg-2" id="founderCard" style="width: 18rem; height: 18rem; margin: 1rem; border: 0">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="..." style="height: 13rem; outline: 1px solid #d0d0d0">
+                <label style="margin: 1rem auto"><input type="radio" name="job" value="founder" {{#if result.founder}}checked{{/if}}>創業家</label>
+        </div>
+    </div>
+    <div class="btnAndTrashTalk row justify-content-center">
+        <div class="submitBtn" style="margin: 1rem 2rem">
+            <button type="submit" class="btn btn-secondary">產生幹話</button>
+        </div>
+        <div class="card" style="width: 30rem; height: 10rem">
+            <div class="card-body" id="trashTalkBlock" style="width: 30rem; height: 10rem">
+                <p class="card-text">{{result.trashTalk}}</p>
+            </div>
+        </div>
+    </div>
+</form>
